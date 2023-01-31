@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Http</title>
+    <link rel="stylesheet" href="assets/styles/app.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js" defer></script>
+    <script src="assets/scripts/app.js" defer></script>
+  </head>
+  <body>
+    <template id="single-post">
+      <li class="post-item">
+        <h2></h2>
+        <p></p>
+        <button>DELETE</button>
+      </li>
+    </template>
+    <section id="new-post">
+      <form>
+        <div class="form-control">
+          <label for="title">Title</label>
+          <input type="text" id="title" name="title"/>
+        </div>
+        <div class="form-control">
+          <label for="content">Content</label>
+          <textarea rows="3" id="content" name="body"></textarea>
+        </div>
+        <button type="submit">ADD</button>
+      </form>
+    </section>
+    <section id="available-posts">
+      <button>FETCH POSTS</button>
+      <ul class="posts"></ul>
+    </section>
+  </body>
+</html>
+
+<div showIfStage="runOutFreeArticles">
+  <h2 style=" font-size: 1.5rem;line-height: 1.718rem;letter-spacing: -.05rem;">You have reached your free article limit.</h2>
+  <p style="font-size: 1rem;margin-bottom: 1.245rem;">To enjoy another 5 FREE articles, please register now.</p>
+</div>
+
+<p ng-show="false" class="sub-lead">
+  <span *showIfSocialAuthNotAvailable><t>Sign up a new account.</t></span>
+  <span *showIfSocialAuthAvailable><t>Sign up a new account using a social account</t></span>
+</p>
+
+<!-- <p class="sub-lead">
+  <span *showIfSocialAuthNotAvailable><t>Sign up a new account.</t></span>
+  <span *showIfSocialAuthAvailable><t>Sign up a new account using a social account</t></span>
+</p> -->
